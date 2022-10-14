@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="page_header">
+    <header class="page_header" data-test="header">
       <nav class="navigation">
         <a class="navigation_logo">
           <img class="page_header_logo" src="image/logo.svg" alt="Логотип  города Седона">
@@ -41,16 +41,16 @@
       </nav>
     </header>
 
-    <main class="main_index">
+    <main class="main_index" data-test="main">
       <h1 class="visually_hidden">Город Седона</h1>
-      <img class="welcome_to_sedona" src="image/welcome_to_sedona.svg" alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон - отстой"
 
-      <section class="about_sedona">
+      <section class="about_sedona" data-test="hero">
+        <img class="welcome_to_sedona" src="image/welcome_to_sedona.svg" alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон - отстой"
         <p class="text_about_sedona">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <p class="text_about_sedona_reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually_hiden">Преимущества</h2>
         <ul class="advantages_list">
           <li class="advantages_item advantages_item_blue_card">
@@ -100,13 +100,13 @@
         </ul>
       </section>
 
-      <section class="interested">
-        <h2 class="interesred_title">Заинтересовались?</h2>
-        <p class="interested_description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <section class="search_hotel" data-test="search">
+        <h2 class="search_hotel_title">Заинтересовались?</h2>
+        <p class="search_hotel_description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="button button_brown" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
-      <section class="mailing">
+      <section class="mailing" data-test="subscribe">
         <h2 class="mailing_title">Подпишитесь на рассылку</h2>
         <p class="mailing_description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
         <form class="mailng_form"  action="https://echo.htmlacademy.ru/" method="post">
@@ -118,7 +118,7 @@
 
     </main>
 
-    <footer class="page_footer">
+    <footer class="page_footer" data-test="footer">
       <section class="social">
         <h2 class="visually_hidden">Социальные сети</h2>
         <ul class="social_list">
