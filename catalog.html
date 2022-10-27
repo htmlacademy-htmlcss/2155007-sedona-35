@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
   </head>
   <body>
     <header class="page_header" data-test="header">
@@ -35,7 +37,7 @@
               </a>
           </li>
           <li class="navigation_item">
-            <a class="navigation_link button button_brown" href="#">Хочу сюда!</a>
+            <a class="navigation_link navigation_link_button button button_brown" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -56,25 +58,25 @@
         </ul>
 
         <div class="filter_hotels" data-test="filter">
-          <h2 class="visually_hidden">Фильрты</h2>
+          <h2 class="visually_hidden">Фильтры</h2>
           <form class="filter_hotels_form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="filter_infrastructure">
-              <legend class="filter_infrastructure_title">Инфраструктура:</legend>
+              <legend class="filter_title">Инфраструктура:</legend>
               <ul class="filter_infrastructure_list">
                 <li class="filter_infrastructure_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="checkbox" name="swimming_pool" checked>
                     Бассейн
                   </label>
                 </li>
                 <li class="filter_infrastructure_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="checkbox" name="parking_space" checked>
                     Парковка
                   </label>
                 </li>
                 <li class="filter_infrastructure_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="checkbox" name="wi_fi">
                     Wi-Fi
                   </label>
@@ -83,22 +85,22 @@
             </fieldset>
 
             <fieldset class="filter_type_of_housing">
-              <legend class="filter_type_of_housing_title">Тип жилья:</legend>
+              <legend class="filter_title">Тип жилья:</legend>
               <ul class="filter_type_of_housing_list">
                 <li class="filter_type_of_housing_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="radio" name="type_of_housing" value="hotel" checked>
                     Гостиница
                   </label>
                 </li>
                 <li class="filter_type_of_housing_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="radio" name="type_of_housing" value="motel">
                     Мотель
                   </label>
                 </li>
                 <li class="filter_type_of_housing_item">
-                  <label class="control">
+                  <label class="control_label">
                     <input class="control_input" type="radio" name="type_of_housing" value="apartments">
                     Апартаменты
                   </label>
@@ -116,29 +118,31 @@
 
       <section class="section_hotel_catalog" data-test="catalog">
         <h2 class="visually_hidden">Каталог гостиниц</h2>
-        <p> Найдено гостиниц:<span>38</span></p>
-        <select class="select_control" aria-label="Сортировка">
-          <option value="popular">Сначала популярные</option>
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <ul class="catalog_view">
-          <li class="catalog_view">
-            <a class="button" href="#">
-              <span class="visually_hidden">Показать плиткой</span>
-            </a>
-          </li>
-          <li class="catalog_view">
-            <a class="button" href="#">
-              <span class="visually_hidden">Показать карточками</span>
-            </a>
-          </li>
-          <li class="catalog_view">
-            <a class="button" href="#">
-              <span class="visually_hidden">Показать списокм</span>
-            </a>
-          </li>
-        </ul>
+        <div class="sorting-container">
+          <p class="found_hotels"> Найдено гостиниц:<span>38</span></p>
+          <select class="select_control" aria-label="Сортировка">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <ul class="catalog_view">
+            <li class="catalog_view">
+              <a class="button" href="#">
+                <span class="visually_hidden">Показать плиткой</span>
+              </a>
+            </li>
+            <li class="catalog_view">
+              <a class="button" href="#">
+                <span class="visually_hidden">Показать карточками</span>
+              </a>
+            </li>
+            <li class="catalog_view">
+              <a class="button" href="#">
+                <span class="visually_hidden">Показать списком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <ul class="hotel_cards_list">
           <li class="hotel_cards">
@@ -205,7 +209,7 @@
             <a class="pagination_link" href="#">4</a>
           </li>
           <li class="pagination_item">
-            <a class="pagination_link" href="#">...</a>
+            <a class="pagination_link pagination_still" href="#">...</a>
           </li>
           <li class="pagination_item">
             <a class="pagination_link" href="#">10</a>
@@ -215,8 +219,8 @@
       </section>
     </main>
 
-    <footer class="page_footer" data-test="footer">
-      <section class="mailing" data-test="subscribe">
+    <footer class="page_footer inner_footer" data-test="footer">
+      <section class="mailing mailing_inner_footer" data-test="subscribe">
         <h2 class="mailing_title">Подпишитесь на рассылку</h2>
         <p class="mailing_description">Только полезная информация и никакого спама,  честное бойскаутское!</p>
         <form class="mailng_form"  action="https://echo.htmlacademy.ru/" method="post">
