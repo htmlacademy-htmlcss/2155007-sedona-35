@@ -33,7 +33,9 @@ body {
 }
 
 /* Pages */
-
+.navigation_list{
+  list-style: none;
+}
 .navigation_link {
   font-size: 20px;
   line-height: 24px;
@@ -49,6 +51,12 @@ body {
   color: #FFFFFF;
   background-color: #756157;
   text-transform: uppercase;
+}
+.favourites {
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  background-color: #7DB54F;
 }
 
 .welcom {
@@ -76,6 +84,7 @@ body {
 
 .advantages_list {
   text-align: center;
+  list-style: none;
 }
 .advantages_item {
   color: #000000;
@@ -90,7 +99,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-title {
+.advantages_title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -105,6 +114,7 @@ body {
 
 .services_list {
   text-align: center;
+  list-style: none;
 }
 .services_item{
   color: #000000;
@@ -132,6 +142,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  text-transform: uppercase ;
 }
 .search_hotel_description{
   font-size: 22px;
@@ -157,6 +168,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+  text-transform: uppercase;
 }
 .mailing_description{
   font-size: 22px;
@@ -168,8 +180,11 @@ body {
   background-color: #82B3D3;
 }
 
+/*social*/
+.social_list {
+  list-style: none;
+}
 /*contacts*/
-
 .contacts_address_phone {
   font-size: 40px;
   font-style: normal;
@@ -198,6 +213,7 @@ body {
 .breadcrumbs {
   color: #FFFFFF;
   font-size: 16px;
+  list-style: none;
 }
 .breadcrumbs_link {
   color: inherit;
@@ -206,6 +222,9 @@ body {
 /*filters*/
 .filter_hotels {
   color: #FFFFFF;
+}
+.filter_infrastructure_list, .filter_type_of_housing_list {
+  list-style: none;
 }
 .filter_title {
   font-size: 20px;
@@ -229,22 +248,28 @@ body {
   text-align: left;
   text-transform: uppercase;
 }
-.sorting-container {
-  color: #000000;
-  background-color: #ffffff;
+.catalog_view {
+  list-style: none;
 }
 
 /*hotel_cards*/
+.hotel_cards_list {
+  list-style: none;
+}
 .hotel_cards_title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: left;
+  color: #000000;
+}
+.hotel_cards_link {
+  text-decoration: none;
 }
 .hotel_cards_description {
   text-align: left;
 }
-.hotel_card_price {
+.hotel_cards_price {
   text-align: right;
 }
 .rating {
@@ -253,9 +278,13 @@ body {
   text-align: center;
   color: #333333;
   background-color: #F2F2F2;
+  text-transform: uppercase;
 }
 
 /*pagination*/
+.pagination_list {
+  list-style: none;
+}
 .pagination_link {
   font-size: 20px;
   font-weight: 700;
