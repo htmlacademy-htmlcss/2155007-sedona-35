@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
 
   </head>
+
   <body>
     <div class="page_container">
       <header class="page_header" data-test="header">
         <nav class="navigation">
-          <a class="navigation_logo" href="index.html">
-            <img class="page_header_logo" src="image/logo.svg" alt="Логотип  города Седона" width="140" height="70">
+          <a class="navigation_logo_link" href="index.html">
+            <img class="navigation_logo_image" src="image/logo.svg" alt="Логотип  города Седона." width="140" height="70">
           </a>
           <ul class="navigation_list">
             <li class="navigation_item">
@@ -21,21 +23,21 @@
               <a class="navigation_link" href="#">О Седоне</a>
             </li>
             <li class="navigation_item">
-              <a class="navigation_link navigation-link-current">Гостиницы</a>
+              <a class="navigation_link navigation_link_current">Гостиницы</a>
             </li>
           </ul>
 
-          <ul class="navigation_list navigation-user">
+          <ul class="navigation_list navigation_user">
             <li class="navigation_item">
               <a class="navigation_link" href="#">
-                <span class="visually_hidden">Поиск</span>
+                <span class="visually_hidden">Поиск.</span>
               </a>
             </li>
             <li class="navigation_item">
               <a class="navigation_link" href="#">
                 <span class="visually_hidden"> Избранное</span>
                 <span class="favourites">12</span>
-                </a>
+              </a>
             </li>
             <li class="navigation_item">
               <a class="navigation_link navigation_link_button button button_brown" href="#">Хочу сюда!</a>
@@ -44,14 +46,14 @@
         </nav>
       </header>
 
-      <main class="main_inner main-container" data-test="main">
-        <div class="main__page_container">
+      <main class="main_inner main_container" data-test="main">
+        <div class="main_page_container">
           <header class="inner_header">
             <h1 class="inner_header_title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs_item">
                 <a class="breadcrumbs_link" href="index.html">
-                  <span class="visually_hidden">Главная</span>
+                  <span class="visually_hidden">Главная.</span>
                 </a>
               </li>
               <li class="breadcrumbs_item">
@@ -60,7 +62,7 @@
             </ul>
 
             <div class="filter_hotels" data-test="filter">
-              <h2 class="visually_hidden">Фильтры</h2>
+              <h2 class="visually_hidden">Фильтры.</h2>
               <form class="filter_hotels_form" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="filter_infrastructure">
                   <legend class="filter_title">Инфраструктура:</legend>
@@ -68,19 +70,19 @@
                     <li class="filter_infrastructure_item">
                       <label class="control_label">
                         <input class="control_input" type="checkbox" name="swimming_pool" checked>
-                    Бассейн
+                        Бассейн
                       </label>
                     </li>
                     <li class="filter_infrastructure_item">
                       <label class="control_label">
                         <input class="control_input" type="checkbox" name="parking_space" checked>
-                    Парковка
+                        Парковка
                       </label>
                     </li>
                     <li class="filter_infrastructure_item">
                       <label class="control_label">
                         <input class="control_input" type="checkbox" name="wi_fi">
-                    Wi-Fi
+                        Wi-Fi
                       </label>
                     </li>
                   </ul>
@@ -92,19 +94,19 @@
                     <li class="filter_type_of_housing_item">
                       <label class="control_label">
                         <input class="control_input" type="radio" name="type_of_housing" value="hotel" checked>
-                    Гостиница
+                        Гостиница
                       </label>
                     </li>
                     <li class="filter_type_of_housing_item">
                       <label class="control_label">
                         <input class="control_input" type="radio" name="type_of_housing" value="motel">
-                    Мотель
+                        Мотель
                       </label>
                     </li>
                     <li class="filter_type_of_housing_item">
                       <label class="control_label">
                         <input class="control_input" type="radio" name="type_of_housing" value="apartments">
-                    Апартаменты
+                        Апартаменты
                       </label>
                     </li>
                   </ul>
@@ -119,7 +121,7 @@
           </header>
 
           <section class="section_hotel_catalog" data-test="catalog">
-            <h2 class="visually_hidden">Каталог гостиниц</h2>
+            <h2 class="visually_hidden">Каталог гостиниц.</h2>
             <div class="sorting-container">
               <p class="found_hotels"> Найдено гостиниц:<span>38</span></p>
               <select class="select_control" aria-label="Сортировка">
@@ -130,17 +132,17 @@
               <ul class="catalog_view">
                 <li class="catalog_view_item">
                   <a class="button" href="#">
-                    <span class="visually_hidden">Показать плиткой</span>
+                    <span class="visually_hidden">Показать плиткой.</span>
                   </a>
                 </li>
                 <li class="catalog_view_item">
                   <a class="button" href="#">
-                    <span class="visually_hidden">Показать карточками</span>
+                    <span class="visually_hidden">Показать карточками.</span>
                   </a>
                 </li>
                 <li class="catalog_view_item">
                   <a class="button" href="#">
-                    <span class="visually_hidden">Показать списком</span>
+                    <span class="visually_hidden">Показать списком.</span>
                   </a>
                 </li>
               </ul>
@@ -149,7 +151,8 @@
             <ul class="hotel_cards_list">
               <li class="hotel_cards_item">
                 <a class="hotel_cards_link" href="#">
-                  <img class="hotel_cards_img" src="image/amara_resort_spa.jpg" alt="Звездное небо в расщелине гор" width="300" height="212">
+                  <img class="hotel_cards_img" src="image/amara_resort_spa.jpg" alt="Звездное небо в расщелине гор."
+                    width="300" height="212">
                   <h3 class="hotel_cards_title">Amara Resort & Spa</h3>
                 </a>
                 <p class="hotel_cards_description">Гостиница</p>
@@ -161,7 +164,8 @@
               </li>
               <li class="hotel_cards_item">
                 <a class="hotel_cards_link" href="#">
-                  <img class="hotel_cards_img" src="image/villias_at_poco_diablo.jpg" alt="Радуга над горным хребтом" width="300" height="212">
+                  <img class="hotel_cards_img" src="image/villias_at_poco_diablo.jpg" alt="Радуга над горным хребтом."
+                    width="300" height="212">
                   <h3 class="hotel_cards_title">Villas at Poco Diablo</h3>
                 </a>
                 <p class="hotel_cards_description">Гостиница</p>
@@ -173,7 +177,8 @@
               </li>
               <li class="hotel_cards_item">
                 <a class="hotel_cards_link" href="#">
-                  <img class="hotel_cards_img" src="image/desert_quail_inn.jpg" alt="Горы на фоне голубого неба" width="300" height="212">
+                  <img class="hotel_cards_img" src="image/desert_quail_inn.jpg" alt="Горы на фоне голубого неба."
+                    width="300" height="212">
                   <h3 class="hotel_cards_title">Desert Quail Inn</h3>
                 </a>
                 <p class="hotel_cards_description">Гостиница</p>
@@ -185,7 +190,8 @@
               </li>
               <li class="hotel_cards_item">
                 <a class="hotel_cards_link" href="#">
-                  <img class="hotel_cards_img" src="image/greentree_inn.jpg" alt="Горна на фоне звездного неба" width="300" height="212">
+                  <img class="hotel_cards_img" src="image/greentree_inn.jpg" alt="Горна на фоне звездного неба."
+                    width="300" height="212">
                   <h3 class="hotel_cards_title">GreenTree Inn</h3>
                 </a>
                 <p class="hotel_cards_description">Гостиница</p>
@@ -222,14 +228,14 @@
         </div>
       </main>
 
-      <footer class="page_footer" data-test="footer">
+      <footer class="page_footer inner_footer" data-test="footer">
         <div class="page-footer-container">
-          <section class="mailing" data-test="subscribe">
+          <section class="mailing mailing_inner_footer" data-test="subscribe">
             <div class="mailing_container">
               <h2 class="mailing_title">Подпишитесь на рассылку</h2>
               <p class="mailing_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-              <form class="mailng_form"  action="https://echo.htmlacademy.ru/" method="post">
-                <span class="visually_hidden">Ваш email</span>
+              <form class="mailng_form" action="https://echo.htmlacademy.ru/" method="post">
+                <span class="visually_hidden">Ваш email.</span>
                 <input type="email" name="email" value="Ваш email">
                 <button class="button button_blue" type="submit">Подписаться</button>
               </form>
@@ -238,37 +244,38 @@
 
           <div class="footer_contacts_container">
             <section class="social">
-              <h2 class="visually_hidden">Социальные сети</h2>
+              <h2 class="visually_hidden">Социальные сети.</h2>
               <ul class="social_list">
                 <li class="social_item">
                   <a class="social_link" href="https://vk.com/htmlacademy">
-                    <span class="visually_hidden">ВКонтакте</span>
+                    <span class="visually_hidden">ВКонтакте.</span>
                   </a>
                 </li>
                 <li class="social_item">
                   <a class="social_link" href="https://t.me/htmlacademy">
-                    <span class="visually_hidden">Телеграм</span>
+                    <span class="visually_hidden">Телеграм.</span>
                   </a>
                 </li>
                 <li class="social_item">
                   <a class="social_link" href="https://www.youtube.com/user/htmlacademyru">
-                   <span class="visually_hidden">Ютюб</span>
+                    <span class="visually_hidden">Ютюб.</span>
                   </a>
                 </li>
               </ul>
             </section>
 
             <section class="contacts">
-              <h2 class="visually_hidden">Контакты</h2>
+              <h2 class="visually_hidden">Контакты.</h2>
               <address class="contacts_address">
                 <a class="contacts_address_phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
               </address>
             </section>
 
             <section class="copyright">
-              <h2 class="visually_hidden">Сделано в htmlacademy</h2>
-              <a  class="copyright_link" href="https://htmlacademy.ru">
-              <img class="logo_htmlacademy" src="image/logo_htmlacademy.svg" alt="Логотип htmlacademy" width="115" height="33">
+              <h2 class="visually_hidden">Сделано в htmlacademy.</h2>
+              <a class="copyright_link" href="https://htmlacademy.ru">
+                <img class="logo_htmlacademy" src="image/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="115"
+                  height="33">
               </a>
             </section>
           </div>
@@ -276,4 +283,5 @@
       </footer>
     </div>
   </body>
+
 </html>
