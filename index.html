@@ -151,7 +151,7 @@
             <p class="mailing_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="mailng_form" action="https://echo.htmlacademy.ru/" method="post">
               <span class="visually_hidden">Ваш email.</span>
-              <input type="email" name="email" value="Ваш email">
+              <input class="mailing_input" type="email" name="email" value="Ваш email">
               <button class="button mailing_button" type="submit">Подписаться</button>
             </form>
           </div>
@@ -212,8 +212,43 @@
         </div>
       </div>
     </footer>
-
   </div>
+
+  <div class="modal_container modal_container_close">
+    <div class="modal modal_search_hotels">
+      <button class="modal_close_button">
+        <span class="visually_hidden">Закрыть</span>
+      </button>
+      <section class="modal_content">
+        <h2 class="modal_title">Поиск гостиницы в Седоне</h2>
+        <form class="modal_search_hotels_form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal_form_list">
+            <li class="modal_form_item modal_form_item_arrival">
+              <label class="modal_label" for="arrival"> Дата заезда:</label>
+              <input class="modal_input" type="text" id="arrival" name="arrival">
+            </li>
+            <li class="modal_form_item modal_form_item_departure">
+              <label class="modal_label" for="departure"> Дата выезда:</label>
+              <input class="modal_input" type="text" id="departure" name="departure">
+            </li>
+            <li class="modal_form_item modal_form_item_adults">
+              <label class="modal_label" for="adults"> Взрослые:</label>
+              <input class="modal_input" type="text" id="adults" name="adults">
+            </li>
+            <li class="modal_form_item modal_form_item_children">
+              <label class="modal_label" for="children"> Дети:</label>
+              <input class="modal_input" type="text" id="children" name="children">
+            </li>
+            <li class="modal_form_item modal_form_item_button">
+              <button class="modal_button" type="button">Найти</button>
+            </li>
+
+          </ul>
+        </form>
+      </section>
+    </div>
+  </div>
+
 </body>
 
 </html>

@@ -81,21 +81,24 @@
                 <legend class="filter_title">Инфраструктура:</legend>
                 <ul class="filter_infrastructure_list">
                   <li class="filter_infrastructure_item">
-                    <label class="control_label">
-                      <input class="control_input" type="checkbox" name="swimming_pool" checked>
-                      Бассейн
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="checkbox" name="swimming_pool" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Бассейн</span>
                   </label>
                   </li>
                   <li class="filter_infrastructure_item">
-                    <label class="control_label">
-                      <input class="control_input" type="checkbox" name="parking_space" checked>
-                        Парковка
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="checkbox" name="parking_space" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">Парковка</span>
                     </label>
                   </li>
                   <li class="filter_infrastructure_item">
-                    <label class="control_label">
-                      <input class="control_input" type="checkbox" name="wi_fi">
-                        Wi-Fi
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="checkbox" name="wi_fi">
+                      <span class="control_mark"></span>
+                      <span class="control_label"> Wi-Fi</span>
                     </label>
                   </li>
               </fieldset>
@@ -104,28 +107,56 @@
                 <legend class="filter_title">Тип жилья:</legend>
                 <ul class="filter_housing_list">
                   <li class="filter_housing_item">
-                    <label class="control_label">
-                      <input class="control_input" type="radio" name="type_of_housing" value="hotel" checked>
-                      Гостиница
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="radio" name="type_of_housing" value="hotel" checked>
+                      <span class="control_mark"></span>
+                      <span class="control_label">  Гостиница</span>
                     </label>
                   </li>
                   <li class="filter_housing_item">
-                    <label class="control_label">
-                      <input class="control_input" type="radio" name="type_of_housing" value="motel">
-                      Мотель
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="radio" name="type_of_housing" value="motel">
+                      <span class="control_mark"></span>
+                      <span class="control_label"> Мотель</span>
                     </label>
                   </li>
                   <li class="filter_housing_item">
-                    <label class="control_label">
-                      <input class="control_input" type="radio" name="type_of_housing" value="apartments">
-                      Апартаменты
+                    <label class="control">
+                      <input class="visually_hidden control_input" type="radio" name="type_of_housing" value="apartments">
+                      <span class="control_mark"></span>
+                      <span class="control_label">  Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <!--
-                <fieldset class="filter_price"></fieldset>
-                -->
+
+              <fieldset class="filter_price">
+                <legend class="filter_title">Стоимость, ₽:</legend>
+                  <div class="range">
+                    <div class="range_inputs_container">
+                      <input class="range_input" id="min_price" type="number" value="0" name="min_price">
+                      <label class="range_label" for="min_price">
+                        от
+                      </label>
+                      <input class="range_input" id="max_price" type="number" value="9000" name="max_price" style="width: 143px">
+                      <label class="range_label" for="max_price">
+                      до
+                      </label>
+                    </div>
+
+                    <div class="range_scale">
+                      <div class="range_bar" style="left: 0; width: 226px">
+                        <button class="range_toggle toggle_min">
+                          <span class="visually_hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range_toggle toggle_max">
+                          <span class="visually_hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
+                 </div>
+              </fieldset>
+
               <p class="fieldset_button_container">
                 <button class="button fieldset_button" type="submit">Применить</button>
                 <button class="button fieldset_button_reset" type="reset">Сбросить</button>
@@ -139,10 +170,10 @@
           <div class="sorting-container">
             <p class="found_hotels_title"> Найдено гостиниц:<span>38</span></p>
             <select class="select_control" aria-label="Сортировка">
-              <option value="popular">Сначала популярные</option>
               <option value="cheap">Сначала дешевые</option>
+              <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
-            </select>
+              </select>
             <div class="catalog_view_block">
               <a class="view_toggle view_toggle_сurrent" href="#">
                 <span class="visually_hidden">Показать плиткой.</span>
@@ -263,7 +294,7 @@
             <p class="mailing_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="mailng_form" action="https://echo.htmlacademy.ru/" method="post">
               <span class="visually_hidden">Ваш email.</span>
-              <input type="email" name="email" value="Ваш email">
+              <input class="mailing_input" type="email" name="email" value="Ваш email">
               <button class="button mailing_button" type="submit">Подписаться</button>
             </form>
           </div>
@@ -315,6 +346,7 @@
       </div>
     </footer>
   </div>
+
 </body>
 
 </html>
