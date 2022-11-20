@@ -871,7 +871,7 @@ body {
   width: 20px;
   height: 20px;
   opacity: 0.3;
-  background-image: url("../image/date_icon.svg");
+  background-image: url("../image/icons/date_icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -885,7 +885,7 @@ body {
   width: 20px;
   height: 20px;
   opacity: 0.3;
-  background-image: url("../image/date_icon.svg");
+  background-image: url("../image/icons/date_icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -903,12 +903,6 @@ body {
   margin-top: 4px;
   font-size: 16px;
   line-height: 21px;
-}
-
-.modal_item_children .modal_input,
-.modal_item_adults .modal_input {
-  width: 110px;
-  margin-left: 46px;
 }
 
 .number_container {
@@ -1054,6 +1048,9 @@ Modal_input, Modal_button Hover, Focus, Active*/
 }
 
 .tooltip_text {
+  position: absolute;
+  top: 39px;
+  left: -114px;
   display: block;
   width: 256px;
   min-height: 143px;
@@ -1067,28 +1064,28 @@ Modal_input, Modal_button Hover, Focus, Active*/
   ;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  position: absolute;
-  top: 39px;
-  left: -114px;
   z-index: 1;
   text-align: left;
   text-transform: none;
   /*display: none;*/
 }
 
-.tooltip_toggle:hover+.tooltip_text,
-.tooltip_toggle:focus+.tooltip_text {
+.tooltip_toggle:hover + .tooltip_text,
+.tooltip_toggle:focus + .tooltip_text {
   display: block;
 }
 
-.tooltip_text::before {
-  background-image: url("../image/icons/tooltip.svg");
+.tooltip_text::after {
+  position: absolute;
+  left: 117.5px;
+  top: -9px;
+  display: block;
   width: 19px;
   height: 9px;
-  position: absolute;
-  top: 8px;
-  left: 0;
-  content: ("");
+  background-image: url("../image/icons/tooltip_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center ;
+  content: "";
 }
 
 /*.modal_container_close {
