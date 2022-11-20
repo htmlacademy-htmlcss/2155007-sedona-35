@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  min-width: 1200px;
   padding: 0;
   margin: 0;
   min-height: 100%;
@@ -81,7 +82,7 @@ body {
   position: absolute;
   left: 69px;
   top: 0;
-
+  z-index: 1;
 }
 
 .navigation_logo_image {
@@ -147,14 +148,14 @@ body {
   padding: 22px 12px;
 }
 
-.navigation_item:first-child .navigation_user_link {
+.navigation_user_link_search {
   background-image: url("../image/icons/search_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
 }
 
-.navigation_item:last-child .navigation_user_link {
+.navigation_user_link_favorite {
   position: relative;
   background-image: url("../image/icons/heart_icon.svg");
   background-repeat: no-repeat;
@@ -176,8 +177,9 @@ body {
 
 .favourites {
   position: absolute;
-  width: 11px;
-  height: 10px;
+  display: block;
+  min-width: 11px;
+  min-height: 10px;
   right: 4px;
   top: 11px;
   padding: 5px 5px;
@@ -450,7 +452,7 @@ body {
   content: "";
   display: block;
   width: 75px;
-  height: 72px;
+  height: 79px;
   background-image: url("../image/icons/souvenirs_icon.svg");
   background-repeat: no-repeat;
 }
@@ -799,12 +801,10 @@ body {
 
 .modal_item_arrival {
   grid-column: 1/-1;
-  position: relative;
 }
 
 .modal_item_departure {
   grid-column: 1/-1;
-  position: relative;
 }
 
 .modal_item_adults {
@@ -848,45 +848,22 @@ body {
 }
 
 .modal_input {
+  position: relative;
   width: 440px;
   height: 48px;
-  padding: 12px 20px;
+  padding: 12px 34px 12px 20px;
   box-sizing: border-box;
-  background-color: #F2F2F2;
   border-radius: 4px;
   border: none;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-}
-
-.modal_item_departure::after {
-  position: absolute;
-  top: 25px;
-  right: 18px;
-  content: "";
-  transform: translateY(-50%);
-  display: block;
-  width: 20px;
-  height: 20px;
-  opacity: 0.3;
+  background-color: #F2F2F2;
   background-image: url("../image/icons/date_icon.svg");
   background-repeat: no-repeat;
-}
+  background-position: top 15px right 22px;
 
-.modal_item_arrival::after {
-  position: absolute;
-  top: 25px;
-  right: 18px;
-  content: "";
-  transform: translateY(-50%);
-  display: block;
-  width: 20px;
-  height: 20px;
-  opacity: 0.3;
-  background-image: url("../image/icons/date_icon.svg");
-  background-repeat: no-repeat;
 }
 
 .modal_input_error {
@@ -906,7 +883,9 @@ body {
 }
 
 .number_container {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 110px;
   height: 48px;
   padding: 14px 10px;
@@ -915,11 +894,13 @@ body {
   background-color: #F2F2F2;
   z-index: 0;
 }
+.number_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .less_number_button {
-  position: absolute;
-  left: 10px;
-  top: 5px;
   width: 20px;
   height: 20px;
   padding: 9px 3px;
@@ -930,9 +911,6 @@ body {
 }
 
 .more_number_button {
-  position: absolute;
-  right: 9px;
-  bottom: 13px;
   width: 20px;
   height: 20px;
   padding: 3px;
@@ -958,14 +936,12 @@ body {
 }
 
 .modal_number_input {
-  position: absolute;
-  top: 3px;
-  left: 40px;
   width: 31px;
   height: 48px;
   padding: 14px 10px;
   box-sizing: border-box;
   border: none;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -980,7 +956,7 @@ body {
 .modal_button {
   margin-top: 25px;
   width: 577px;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1021,7 +997,7 @@ Modal_input, Modal_button Hover, Focus, Active*/
 }
 
 .modal_button:active {
-  /*color: rgba (255, 255, 255, 0.3);*/
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*tooltip*/
@@ -1088,9 +1064,9 @@ Modal_input, Modal_button Hover, Focus, Active*/
   content: "";
 }
 
-/*.modal_container_close {
+.modal_container_close {
   display: none;
-}*/
+}
 
 /*Main_inner*/
 .inner_header {
@@ -1114,6 +1090,7 @@ Modal_input, Modal_button Hover, Focus, Active*/
 /* Breadcrumbs */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -1135,7 +1112,7 @@ Modal_input, Modal_button Hover, Focus, Active*/
   background-position: left 0 center;
 }
 
-.breadcrumbs_item:first-child .breadcrumbs_link {
+.breadcrumbs_item:first-child .breadcrumbs_link_home {
   display: block;
   position: relative;
   width: 14px;
@@ -1144,10 +1121,11 @@ Modal_input, Modal_button Hover, Focus, Active*/
   align-self: center;
 }
 
-.breadcrumbs_link_home {
+.breadcrumbs_link_home_icon {
   position: absolute;
   margin: 3.5px 5.5px 0.5px;
   margin-left: 0;
+  fill: #ffffff;
 }
 
 /* Breadcrumbs_link Hover, Focus, Active*/
@@ -1161,6 +1139,17 @@ Modal_input, Modal_button Hover, Focus, Active*/
 
 .breadcrumbs_link:active {
   color: rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs_link_home:hover .breadcrumbs_link_home_icon {
+  fill:rgba(255, 255, 255, 0.6); ;
+}
+
+.breadcrumbs_link_home:focus .breadcrumbs_link_home_icon {
+  fill: #ffffff;
+}
+
+.breadcrumbs_link_home:active .breadcrumbs_link_home_icon {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 /*Filters*/
@@ -1493,14 +1482,14 @@ Modal_input, Modal_button Hover, Focus, Active*/
   height: 49px;
   margin-left: auto;
   margin-right: 70px;
-  padding: 11px 17px;
+  padding: 11px 41px 11px 17px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   vertical-align: top;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
   background-color: #FFFFFF;
   background-image: url("../image/icons/arrov_select_icon.svg");
   background-repeat: no-repeat;
@@ -1754,6 +1743,7 @@ Modal_input, Modal_button Hover, Focus, Active*/
 /*Pagination*/
 .pagination_list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1766,9 +1756,10 @@ Modal_input, Modal_button Hover, Focus, Active*/
 .pagination_link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px 24px 12px 24px;
+  border-radius: 4px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -1776,7 +1767,6 @@ Modal_input, Modal_button Hover, Focus, Active*/
   color: #FFFFFF;
   background-color: #82B3D3;
   text-decoration: none;
-  border-radius: 4px;
 }
 
 .pagination_link_ten {

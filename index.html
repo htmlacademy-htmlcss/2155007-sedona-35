@@ -30,12 +30,12 @@
 
                 <ul class="navigation_list navigation_user">
                     <li class="navigation_item">
-                        <a class="navigation_link navigation_user_link" href="#">
+                        <a class="navigation_link navigation_user_link_search" href="#">
                             <span class="visually_hidden">Поиск.</span>
                         </a>
                     </li>
                     <li class="navigation_item">
-                        <a class="navigation_link navigation_user_link" href="#">
+                        <a class="navigation_link navigation_user_link_favorite" href="#">
                             <span class="visually_hidden"> Избранное.</span>
                             <span class="favourites">12</span>
                         </a>
@@ -242,7 +242,7 @@
                         <li class="modal_form_item modal_item_arrival">
                             <label class="modal_label" for="arrival"> Дата заезда:</label>
                             <p class="modal_inputs_wrapper">
-                                <input class="modal_input modal_input_date" type="text" id="arrival" name="arrival"
+                                <input class="modal_input" type="text" id="arrival" name="arrival"
                                     value="27 апреля 2020" placeholder="Укажите дату">
                                 <span class="modal_input_error">Мы не можем отправить вас в прошлое.</span>
                             </p>
@@ -250,7 +250,7 @@
                         <li class="modal_form_item modal_item_departure">
                             <label class="modal_label" for="departure"> Дата выезда:</label>
                             <p class="modal_inputs_wrapper">
-                                <input class="modal_input modal_input_date" type="text" id="departure" name="departure"
+                                <input class="modal_input" type="text" id="departure" name="departure"
                                     value="1 сентября 2023" placeholder="Укажите дату">
                                 <span class="modal_input_norm">На эти даты есть свободные номера. Пока есть.</span>
                             </p>
@@ -313,8 +313,6 @@
                                   <span class="visually_hidden"> Увеличить кличество детей.</span>
                               </button>
                           </div>
-
-
                         </li>
 
                         <li class="modal_form_item modal_item_button">
